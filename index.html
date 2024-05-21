@@ -4,588 +4,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Shop</title>
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-   
-  
 <style>
-    #navbar {
-        background-color: white;
-
-    }
-
-    .navbar1 {
-        background-color: black;
-        height: 75px;
-
-    }
-
-    .ourbrand {
-        padding: 0%;
-    }
-
-    .carousel2 {
-
-        width: 700px;
-        text-align: center;
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
         display: flex;
         justify-content: center;
         align-items: center;
-
+        height: 100vh;
+        margin: 0;
     }
 
-    .my-flex-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+    .form-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 500px;
     }
 
-    .greenpatti {
-        background-color: green;
-        color: white;
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
-    form {
-        border: 2px solid #004b00;
-        background-color: #004b00;
-        padding: 10px;
-        width: 300px;
+    p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: #666;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
     }
 
     label {
-        display: inline-block;
-        width: 120px;
-        text-align: right;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
     }
 
-    input[type=text],
-    input[type=submit] {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid lightgreen;
+    input[type="text"],
+    select {
+        width: calc(33.3333% - 10px);
+        padding: 10px;
+        margin: 5px 5px 0 0;
+        border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
     }
 
-    input[type=submit] {
-        background-color: #4CAF50;
-        color: white;
-        cursor: pointer;
+    input[type="text"]:last-child,
+    select:last-child {
+        margin-right: 0;
     }
 
-    input[type=submit]:hover {
-        background-color: #45a049;
+    input[type="text"]:first-child,
+    select:first-child {
+        margin-left: 0;
     }
 
     button {
-        background-color: rgb(1, 40, 1);
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
         border: none;
-        border-radius: 5px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
     }
 
-    .endgame2 {
-        color: white;
-        background-color: rgb(40, 40, 40);
-    }
-
-    #cr1 {
-        background-color: rgb(65, 66, 65);
-
+    button:hover {
+        background-color: #0056b3;
     }
 </style>
 
 <body>
-
-
-
-
-    <div class="container-fluid navbar1">
-        <div class="row">
-            <div class="col-4">
-                <a class="navbar-brand" href="#">
-                    <img src="images/—Pngtree—online shop logo design template_9025205.png" alt="Logo" width="150"
-                        height="100" class="d-inline-block align-text-top">
-
-                </a>
+    <div class="form-container">
+        <h1>Student Registration Form</h1>
+        <p>Fill out the form carefully for registration</p>
+        <form>
+            <div class="form-group">
+                <label for="first-name">Student Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="First Name">
+                <input type="text" id="middle-name" name="middle-name" placeholder="Middle Name">
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name">
             </div>
-            <div class="col-3"> </div>
-            <div class="col-5">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Home</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Career</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Products</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact us </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+            <div class="form-group">
+                <label for="birth-date">Birth Date</label>
+                <select id="birth-month" name="birth-month">
+                    <option value="">Month</option>
+                    <!-- Add options for months -->
+                </select>
+                <select id="birth-day" name="birth-day">
+                    <option value="">Day</option>
+                    <!-- Add options for days -->
+                </select>
+                <select id="birth-year" name="birth-year">
+                    <option value="">Year</option>
+                    <!-- Add options for years -->
+                </select>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="">Please Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="street-address" name="street-address" placeholder="Street Address">
+                <input type="text" id="street-address-2" name="street-address-2" placeholder="Street Address Line 2">
+                <input type="text" id="city" name="city" placeholder="City">
+                <input type="text" id="state" name="state" placeholder="State / Province">
+                <input type="text" id="postal-code" name="postal-code" placeholder="Postal / Zip Code">
+            </div>
+
+
+            <div class="form-group">
+                <label for="first-name">Student Info</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Student Email">
+                <input type="text" id="middle-name" name="middle-name" placeholder="Mobile Number">
+            </div>
+
+            <div class="form-group">
+                <label for="first-name">Contact Info</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Phone Number">
+                <input type="text" id="middle-name" name="middle-name" placeholder="Work Number">
+            </div>
+            <div class="form-group">
+                <label for="first-name">Company</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Company Name ">
+
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="courses">Courses</label>
+                <select id="courses" required>
+                    <option value="">Please Select</option>
+                    <!-- Add 10 different course options here -->
+                    <option value="course1">Course 1</option>
+                    <option value="course2">Course 2</option>
+                    <option value="course3">Course 3</option>
+                    <option value="course4">Course 4</option>
+                    <option value="course5">Course 5</option>
+                    <option value="course6">Course 6</option>
+                    <option value="course7">Course 7</option>
+                    <option value="course8">Course 8</option>
+                    <option value="course9">Course 9</option>
+                    <option value="course10">Course 10</option>
+                </select>
+            </div>
+<Label>Additional Comments</Label>
+            <textarea name="comments" rows="4" cols="60"></textarea>
+
+<br> <br>
+
+            <button type="submit">Submit</button><br><br>
+            <button type="submit">Clear Value</button>
+        </form>
     </div>
-    <br>
-    <div class="container-fluid">
-
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div id="carouselExampleCaptions" class="carousel slide">
-
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="images/caroselupper/andras-vas-Bd7gNnWJBkU-unsplash.jpg" height="700px"
-                                width="500px" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Buy Awesome Laptops</h5>
-                                <p>We have all kinds of generation laptops new and second hand</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/caroselupper/designecologist-Pmh0UoG1vlE-unsplash.jpg"
-                                class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Gaming Computers</h5>
-                                <p>Gaming Computers with External Graphic Cards availabe Games pre Installed !!!</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/caroselupper/kari-shea-1SAnrIxw5OY-unsplash.jpg" class="d-block w-100"
-                                alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 style="color: black;"> <strong> Office work laptops </strong></h5>
-                                <p style="color: black;"> <strong> Think pads and many more laptops for office
-                                        work</strong></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="cr1">
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-            <div class="col-2">
-
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <br><br>
-
-
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-3  " >
-                
-                <div class="card" style="width: 18rem; background-color: #004b00; ">
-                    <div class="card-header">
-                      <span style="color: white;" >  <b>Available Items</b></span>
-                    </div>
-                    <ul class="list-group list-group-flush"   >
-                      <li class="list-group-item" style="background-color: black; color: aliceblue;" > Laptops </li> 
-                      <li class="list-group-item" style="background-color: black; color: white; border: solid green 1px;"  >Graphic Cards</li>
-                      <li class="list-group-item" style="background-color: black; color: white; border: solid green 1px;"  >Gaming PCS</li>
-                      <li class="list-group-item" style="background-color: black; color: white; border: solid green 1px;"  >RGB Lights</li>
-                      <li class="list-group-item" style="background-color: black; color: white; border: solid green 1px;"  >Keyboards</li>
-                      <li class="list-group-item" style="background-color: black; color: white; border: solid green 1px;"  >Gaming Mouse</li>
-                      <li class="list-group-item" style="background-color: black; color: white; border: solid green 1px;"  >Procesors</li>
-                      <li class="list-group-item" style="background-color: black; color: white; border: solid green 1px;"  >RAMS</li>
-                      <li class="list-group-item" style="background-color: black; color: white; border: solid green 1px;"  >Monitors</li> 
-                    </ul>
-                  </div>    
-            
-            
-            
-            </div>
-            <div class="col-8">
-                <div class="card-group">
-                    <div class="card">
-                        <img src="images/cards/christian-wiediger-kf_korybd1g-unsplash.jpg" class="card-img-top"
-                            alt="..." height="350px" width="300px">
-                        <div class="card-body">
-                            <h5 class="card-title">RGB</h5>
-                            <p class="card-text">RGB(Red Green blue lights for only 2000PKR )</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/cards/christian-wiediger-KV2vFOYItcY-unsplash.jpg" class="card-img-top"
-                            height="350px" width="300px" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"> Computer system </h5>
-                            <p class="card-text">6 gen computer system 8gb RAM and 4 GB GPU red RGB Lights for Only
-                                20000PKR</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/cards/christian-wiediger-XfSk_BMLj0A-unsplash.jpg" height="350px" width="300px"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Computer System </h5>
-                            <p class="card-text"> 6 gen Computer system with 16 Gb Ram and 8 GB GPU with BLUE lights for
-                                only 30000PKR </p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-3"> </div>
-            <div class="col-8">
-                <div class="card-group">
-                    <div class="card">
-                        <img src="images/cards/florian-krumm-1osIUArK5oA-unsplash.jpg" height="350px" width="300px"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">RGB Keyboard</h5>
-                            <p class="card-text">RGB Keyboard with extra smooth keys sticks for only 899 PKR </p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/cards/josh-sorenson-u8-QI4tRES0-unsplash.jpg" height="350px" width="300px"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Sony Speakers</h5>
-                            <p class="card-text">High Quality Sound Speakers for only 999PKR</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/cards/kane-reinholdtsen-LETdkk7wHQk-unsplash.jpg" height="350px" width="300px"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">MIC</h5>
-                            <p class="card-text"> High Quality sound input system MIC only for 5000PKR</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-3"> </div>
-            <div class="col-8">
-                <div class="card-group">
-                    <div class="card">
-                        <img src="images/cards/nathan-anderson-KHSPGJ3zP0M-unsplash.jpg" height="350px" width="300px"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Computer Case</h5>
-                            <p class="card-text">Empty COmputer case with RGB only for 2000PKR</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/cards/robert-torres-l2s2huyhHAY-unsplash.jpg" height="350px" width="300px"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Gaming Mouse </h5>
-                            <p class="card-text">Gaming mouse only for 4000PKR</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/cards/sumeesh-nagisetty-3aTI-irV5Tg-unsplash.jpg" height="350px" width="300px"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Key board</h5>
-                            <p class="card-text">Best Keyboard for Office and Home Work only for 999PKR</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <br><br>
-
-    <div class="container-fluid ourbrands ">
-
-        <div class="row">
-            <div class="col-4">
-
-            </div>
-
-            <div class="col-4">
-
-                <h2 style="text-align: center;">Our Brands</h2>
-            </div>
-
-            <div class="col-4"></div>
-        </div>
-    </div>
-
-
-
-
-
-    <div class="container-fluid  ">
-
-        <div class="row">
-            <div class="col-2">
-
-            </div>
-            <!-- yaha ha center wala code -->
-            <div class="col-8 d-flex justify-content-center ">
-
-
-                <div id="carouselExampleAutoplaying   " class="carousel slide carousel2" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="images/others/1615533403_screenshot_(91).jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/others/60895ec7d598a5000448ea97.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/others/Intel-logo-2022.png" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="col-2"></div>
-        </div>
-    </div>
-
-
-
-
-
-
-    <br><br>
-    <div class="container-fluid greenpatti ">
-
-        <div class="row">
-            <div class="col-4">
-                <h4>Get our greatest offers straight into your inbox
-                </h4>
-
-            </div>
-
-            <div class="col-4">
-                <form>
-                    <label for="fname">Enter your name:</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    <input type="submit" value="Submit">
-                </form>
-
-            </div>
-
-            <div class="col-4">
-
-                <form>
-                    <label for="fname">Enter your Email</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container-fluid  ">
-
-        <div class="row">
-            <div class="col-4">
-
-            </div>
-
-            <div class="col-4 d-flex justify-content-center "> <button>Sign Up Now</button>
-            </div>
-
-            <div class="col-4"></div>
-        </div>
-    </div>
-
-
-    <div class="container-fluid endgame2  ">
-
-        <div class="row">
-            <div class="col-3">
-                <h6>About us</h6><br>
-                <p>Customer support</p>
-                <br>
-                <p>Our story</p>
-                <p>Privacy notice</p>
-                <p>FAqS</p>
-                <p>What we do</p>
-            </div>
-
-            <div class="col-3">
-                <h6>
-                    Our Policies
-                </h6><br>
-                <p> Order Tracking</p><br>
-                <p>Returns </p><br>
-                <p> Cancellation</p><br>
-                <p> Referalls</p><br>
-                <p> Affiliate / Dropship</p><br>
-            </div>
-
-            <div class="col-3">
-                <h6>
-                    Get in touch
-                </h6><br>
-                <p> +92 3259192418</p><br>
-                <p>sales@gmail.com </p><br>
-                <p> Company name</p><br>
-                <p> Olive street 505 A Canal road</p><br>
-                <p> post address 039-12</p><br>
-            </div>
-            <div class="col-3">
-                <h6>
-                    FOllow us
-                </h6><br>
-                <p> Facebook</p><br>
-                <p> Twitter </p><br>
-                <p> Linked in </p><br>
-                <p> Instagram</p><br>
-                <p> Tik tok</p><br>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <!-- 
-<div class="container-fluid  " >
-
-    <div class="row">
-        <div class="col-4" >
-            
-        </div>
-        
-        <div class="col-4" ></div>
-        
-        <div class="col-4" ></div>
-    </div>
-</div> -->
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
-
-
-
-<script src="font awesome/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/js/all.min.js" ></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
-
-
 </body>
 
 </html>
